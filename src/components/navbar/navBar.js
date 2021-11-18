@@ -1,13 +1,11 @@
 import React from "react";
 import { CartWidget } from "../cartWidget/CardWidget";
-import { Navbar } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
-import { NavDropdown } from "react-bootstrap";
+import {  Container, Navbar, Nav, NavDropdown  } from "react-bootstrap";
+
 
 export const NavBar = () => {
     return (
-        <header className="header">
+        <header>
            <Navbar bg="light" expand="lg">
   <Container>
     <Navbar.Brand href="#home">My Phone</Navbar.Brand>
