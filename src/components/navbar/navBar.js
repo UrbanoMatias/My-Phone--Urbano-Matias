@@ -21,7 +21,7 @@ export const NavBar = () => {
       </Nav>
     </Navbar.Collapse>
   </Container>
-  <CartWidget/>
+  <Link to="carrito/cartview"><CartWidget/></Link>
 </Navbar>
         </header>
     )

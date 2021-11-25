@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Container,  Row } from 'react-bootstrap'
 import { ItemCount } from '../itemCount/ItemCount'
+import { Link } from 'react-router-dom'
 
 
 export const ItemDetail = ({id, category, name, desc1, desc2, desc3, desc4, desc5, price, stock, img1, img2, img3}) => {
@@ -17,7 +18,6 @@ export const ItemDetail = ({id, category, name, desc1, desc2, desc3, desc4, desc
         
         setAggregate(true)
     }
-
 
     return (
         <Container className="">
@@ -74,7 +74,7 @@ export const ItemDetail = ({id, category, name, desc1, desc2, desc3, desc4, desc
                                     setAdd={setAdd}
                                     addItem={addItem}
                                 />
-                            : <button className="btn btn-success text-center">Terminar mi compra</button>
+                            : <Link to="/carrito/cartview"><button className="btn btn-success text-center">Terminar mi compra</button></Link>
                         }
                         </div>
                     </Row>
