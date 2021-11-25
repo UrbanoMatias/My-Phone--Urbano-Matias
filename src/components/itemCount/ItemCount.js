@@ -1,39 +1,36 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { Row } from 'react-bootstrap';
 
 
-export const ItemCount = () => {
+export const ItemCount = ( {max, setAdd, add, addItem} ) => {
      
-    
-
-    const [add, setAdd] = useState(0)
-
-    let stock = 5;
-    
-    const addOn = () =>{
-        setAdd( add + 1)
-        if(add>=stock){
-            setAdd(stock)
-            return alert("Limite de stock");
-        }
+    const deleteItem = () => {
+        add > 0 && setAdd(add -1)
     }
-    const deleteItem = () =>{
-        setAdd( add - 1)
-        if(add===0){
-            return setAdd(0)
-        }
+
+    const addOn = () => {
+        add < max && setAdd(add + 1)
     }
 
     return ( 
-        <div className="container">
-            <p>stock: {stock}</p>
-            <p> cantidad : {add}</p>
-                <button onClick={addOn} className="btn btn-info btn-sm m-1">
-                        agregar
+        
+            <Row className="container d-flex ">
+                <div className="col-4 d-flex justify-content-around  shadow  ">
+                    <button onClick={deleteItem} className="btn col-3" disabled={add === 1}>
+                            -
                         </button>
-                <button onClick={deleteItem} className="btn btn-danger btn-sm m-1">
-                        borrar
-                    </button>
+                    <spam className="align-self-center">{add}</spam>
+                    <button onClick={addOn} className="btn  col-3">
+                            +
+                        </button>
+                </div>
             
-        </div>
+                <button className="btn col-8 text-center shadow" onClick={addItem}> agregar al carrito</button>
+            
+            </Row>
+            
+    
+            
+        
     )
 }
