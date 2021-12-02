@@ -20,8 +20,9 @@ export const NavBar = () => {
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
+    <Link to="carrito/cartview"><CartWidget/></Link>
   </Container>
-  <Link to="carrito/cartview"><CartWidget/></Link>
+  
 </Navbar>
         </header>
     )
