@@ -1,3 +1,17 @@
 .cart {
-    width: 40px;
+    font-size: 30px;
+    color: black;
+
+}
+
+.widget {
+    visibility: visible;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
