@@ -84,7 +84,7 @@ export const products = [
         desc4: "Memoria: 8GB RAM 128GB / 12GB RAM 256GB.",
         desc5: "Batería: 5.000 mAh.",
         price: 93.999,
-        stock:7,
+        stock: 7,
         img1: "https://images.fravega.com/f1000/2e7c0d43994726c44858ceab17c8afa7.jpg",
         img2: "https://images.fravega.com/f500/6949942f966110f71aca433ce43f40df.jpg",
         img3: "https://images.fravega.com/f500/07f3d9e5491611bd5b3e63e909b4ff32.jpg"
