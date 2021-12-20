@@ -19,7 +19,7 @@ export const ItemsListContainer = () => {
         const productsRef = collection(db, 'productos')
         const q = query(productsRef, where('category', '==', catId))
 
-        getDocs(productsRef)
+        getDocs(q)
             .then((collection) => {
                 const items = collection.docs.map((doc) => ({
                     id: doc.id,

@@ -5,7 +5,7 @@ import { CartItem } from './CartItem';
 
 export const CartView = () => {
     
-    const {carrito, deleteCart} = useContext(CartContext);
+    const {carrito, deleteCart, totalBuy} = useContext(CartContext);
 
     return (
         <div  className="container-fluid my-5">
@@ -20,8 +20,11 @@ export const CartView = () => {
                             carrito.map((prod) => <CartItem {...prod}/>)
                         }
                         <hr/>
-                        <button className="btn btn-danger mx-2" onClick={deleteCart}>Vaciar Carrito</button>
-                        <button className="btn btn-success mx-2">Terminar Compra</button>
+                        <div>
+                            <p>Total: ${totalBuy()}</p>
+                            <button className="btn btn-danger mx-2" onClick={deleteCart}>Vaciar Carrito</button>
+                            <Link to="checkout" className="btn btn-success mx-2">Comprar</Link>
+                        </div>
                         </section>
                     </>
                 
