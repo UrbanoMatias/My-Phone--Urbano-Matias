@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-export const Items = ({id, category, name, desc, price, img1, img2, img3}) => {
+export const Items = ({id, category, name, desc, price, img1}) => {
     return (
             <Card key={id} style={{ width: '18rem' }} className="m-4">
                     <Card.Img variant="top" src={img1} alt={name} />

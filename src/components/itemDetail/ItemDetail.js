@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Container,  Row } from 'react-bootstrap'
-import { ItemCount } from '../itemCount/ItemCount'
+import { ItemCount } from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../../context/CartContext'
+import { CartContext } from '../../Context/CartContext'
 
 
 export const ItemDetail = ({id, category, name, desc1, desc2, desc3, desc4, desc5, price, stock, img1, img2, img3}) => {

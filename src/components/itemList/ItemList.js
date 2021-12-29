@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
-import { Items } from '../items/Items'
+import { Items } from '../Items/Items'
 
 export const ItemList = ({product}) => {
     return (

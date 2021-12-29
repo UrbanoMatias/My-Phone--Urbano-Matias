@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { CartContext } from '../context/CartContext'
+import { CartContext } from '../../Context/CartContext';
 import { CartItem } from './CartItem';
 
 export const CartView = () => {
@@ -21,7 +21,7 @@ export const CartView = () => {
                         }
                         <hr/>
                         <div>
-                            <p>Total: ${totalBuy()}</p>
+                            <p>Total: ${totalBuy().toFixed(2)}</p>
                             <button className="btn btn-danger mx-2" onClick={deleteCart}>Vaciar Carrito</button>
                             <Link to="checkout" className="btn btn-success mx-2">Comprar</Link>
                         </div>

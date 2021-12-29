@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { useParams } from 'react-router'
-import { ItemDetail } from '../itemDetail/ItemDetail'
+import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { collection, doc, getDoc } from 'firebase/firestore/lite'
-import { db } from '../firebase/config'
+import { db } from '../Firebase/config'
+import { Loader } from '../Loader/Loader'
 
 export const ItemDetailContainer = () => {
     
@@ -35,7 +36,7 @@ export const ItemDetailContainer = () => {
         <Container className="my-5">
             {
                 loading
-                ? <h2>Cargando...</h2>
+                ? <Loader/>
                 : <ItemDetail {...prod}/>
             }
         </Container>
