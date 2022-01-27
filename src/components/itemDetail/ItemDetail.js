@@ -25,8 +25,8 @@ export const ItemDetail = ({id, category, name, desc1, desc2, desc3, desc4, desc
     }
 
     return (
-        <Container className="">
-            <Row className="">
+        <Container>
+            <Row>
                 <div className="col-6 ">
                 <div id="carouselExampleControls" className="carousel slide carousel-dark d-flex justify-content-center" data-bs-ride="carousel">
                     <div className="carousel-inner">

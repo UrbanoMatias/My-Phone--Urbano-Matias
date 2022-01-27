@@ -13,12 +13,13 @@ export const ItemDetailContainer = () => {
 
     const {prodId} = useParams()
 
+
     useEffect(()=>{
         setLoading(true)
 
         const productsRef = collection(db, 'productos');
-        const docRef = doc(productsRef, prodId)
-
+        const docRef = doc(productsRef, prodId);
+    
         getDoc(docRef)
             .then((doc) => {
                 setProd({
@@ -29,16 +30,20 @@ export const ItemDetailContainer = () => {
             .finally(() => {
                 setLoading(false)
             })
-
+    
     }, [prodId])
 
+
     return (
-        <Container className="my-5">
+        
+         <Container className="my-5">
             {
                 loading
                 ? <Loader/>
                 : <ItemDetail {...prod}/>
             }
         </Container>
+                
+        
     )
 }
